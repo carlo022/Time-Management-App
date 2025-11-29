@@ -62,9 +62,10 @@ This application is more than just a productivity tool; it’s a showcase of my 
 Quick demo
 
 - Web View:  
-   ![Demo Preview](./src/assets/WAppWebview.gif)
+   ![Demo Preview](src/assets/Demo.gif)
 - Mobile View:  
-  <img src="./src/assets/Mobile View.png" style="width:200px;height:400px;"></img>
+  <img src="src/assets/mobile view.png" style="width:200px;height:400px;"></img>
+  <img src="src/assets/stopwatch.png" style="width:200px;height:400px;"></img>
 
   ---
 
