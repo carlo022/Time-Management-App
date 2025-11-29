@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import Stopwatch from './Components/Stopwatch';
 import Timer from './Components/Timer';
+import Footer from './Components/Footer';
 
 const App = () => {
 
@@ -105,7 +106,7 @@ const App = () => {
 <div className="app-container">
       <div className="card">
         <header className="app-header">
-          <h1>React Time App</h1>
+          <h1>Oras App</h1>
           <button 
             className="theme-toggle" 
             onClick={() => setDarkMode(!darkMode)}
@@ -142,6 +143,8 @@ const App = () => {
           <Timer onFinish={addToTimerHistory} history={timerHistory} onClearHistory={clearTimerHistory} />
         </div>
 
+        {/* FOOTER */}
+        <Footer />
       </div>
     </div>
   )
