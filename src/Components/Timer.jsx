@@ -178,13 +178,6 @@ export default function Timer({ onFinish, history, onClearHistory }) {
 
   return (
     <div className="timer-container">
-      {/* NOTIFICATION PERMISSION BUTTON - user gesture required */}
-      {('Notification' in window && Notification.permission !== 'granted') && (
-        <button onClick={requestNotificationPermission} style={{ marginBottom: 10 }}>
-          🔔 Enable Notifications
-        </button>
-      )}
-
       {/* ...existing UI like time display, inputs, controls ... */}
       {isActive || timeLeft > 0 ? (
         <>
