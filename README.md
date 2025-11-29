@@ -1,9 +1,9 @@
 # ⏰ Time Management App
-
-[![Repo Size](https://img.shields.io/github/repo-size/carlo022/React.JS-Weather-Application?color=blue)](https://github.com/carlo022/React.JS-Weather-Application)
-[![License](https://img.shields.io/github.com/carlo022/Time-Management-App/blob/main/LICENSE)](LICENSE)
-[![Languages](https://img.shields.io/github/languages/top/carlo022/React.JS-Weather-Application)](https://github.com/carlo022/React.JS-Weather-Application)
-[![Made by Carlo](https://img.shields.io/badge/author-Carlo-blue)](https://github.com/carlo022)
+![repo size](https://img.shields.io/github/repo-size/carlo022/Time-Management-App?style=flat-square)
+![license](https://img.shields.io/github/license/carlo022/Time-Management-App?color=brightgreen&style=flat-square)
+![frontend](https://img.shields.io/badge/frontend-React-blue?style=flat-square)
+![javascript](https://img.shields.io/badge/javascript-71%25-blue?style=flat-square)
+![author](https://img.shields.io/badge/author-Carlo022-blue?style=flat-square)
 
 
 Welcome to the **Time Management App**—a productivity companion designed to help you plan, track, and optimize your daily routine. This project reflects my passion for building intuitive applications and my continuous growth as a developer. Below, I present a quick overview of the app’s functions, the skills I harnessed, and the technologies I leveraged.
