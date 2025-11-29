@@ -11,10 +11,26 @@ const App = () => {
     return saved !== null ? JSON.parse(saved) : true;
   });
 
-// --- HISTORY STATE ---
-  const [history, setHistory] = useState(() => {
-    const saved = localStorage.getItem('timerHistory');
-    return saved ? JSON.parse(saved) : [];
+// --- TIMER HISTORY STATE ---
+  const [timerHistory, setTimerHistory] = useState(() => {
+    try {
+      const saved = localStorage.getItem('timerHistory');
+      return saved ? JSON.parse(saved) : [];
+    } catch (err) {
+      console.error('Error loading timer history:', err);
+      return [];
+    }
+  });
+
+  // --- STOPWATCH HISTORY STATE ---
+  const [stopwatchHistory, setStopwatchHistory] = useState(() => {
+    try {
+      const saved = localStorage.getItem('stopwatchHistory');
+      return saved ? JSON.parse(saved) : [];
+    } catch (err) {
+      console.error('Error loading stopwatch history:', err);
+      return [];
+    }
   });
 
   const [activeTab, setActiveTab] = useState('stopwatch');
@@ -25,23 +41,64 @@ const App = () => {
     localStorage.setItem('darkMode', JSON.stringify(darkMode));
   }, [darkMode]);
 
-  // Save History to LocalStorage
+  // Save Timer History to LocalStorage
   useEffect(() => {
-    localStorage.setItem('timerHistory', JSON.stringify(history));
-  }, [history]);
+    try {
+      localStorage.setItem('timerHistory', JSON.stringify(timerHistory));
+    } catch (err) {
+      console.error('Error saving timer history:', err);
+    }
+  }, [timerHistory]);
 
-  const addToHistory = (entry) => {
-    const newEntry = {
-      id: Date.now(),
-      timestamp: new Date().toLocaleString(),
-      ...entry
-    };
-    // Add to top of list
-    setHistory(prev => [newEntry, ...prev]);
+  // Save Stopwatch History to LocalStorage
+  useEffect(() => {
+    try {
+      localStorage.setItem('stopwatchHistory', JSON.stringify(stopwatchHistory));
+    } catch (err) {
+      console.error('Error saving stopwatch history:', err);
+    }
+  }, [stopwatchHistory]);
+
+  const addToTimerHistory = (entry) => {
+    try {
+      const newEntry = {
+        id: Date.now(),
+        timestamp: new Date().toLocaleString(),
+        ...entry
+      };
+      setTimerHistory(prev => [newEntry, ...prev]);
+    } catch (err) {
+      console.error('Error adding to timer history:', err);
+    }
   };
 
-  const clearHistory = () => {
-    setHistory([]);
+  const addToStopwatchHistory = (time) => {
+    try {
+      const newEntry = {
+        id: Date.now(),
+        timestamp: new Date().toLocaleString(),
+        time: time
+      };
+      setStopwatchHistory(prev => [newEntry, ...prev]);
+    } catch (err) {
+      console.error('Error adding to stopwatch history:', err);
+    }
+  };
+
+  const clearTimerHistory = () => {
+    try {
+      setTimerHistory([]);
+    } catch (err) {
+      console.error('Error clearing timer history:', err);
+    }
+  };
+
+  const clearStopwatchHistory = () => {
+    try {
+      setStopwatchHistory([]);
+    } catch (err) {
+      console.error('Error clearing stopwatch history:', err);
+    }
   };
 
   return (
@@ -78,11 +135,11 @@ const App = () => {
            so both components stay "alive" in the background.
         */}
         <div style={{ display: activeTab === 'stopwatch' ? 'block' : 'none' }}>
-          <Stopwatch />
+          <Stopwatch onRecord={addToStopwatchHistory} history={stopwatchHistory} onClearHistory={clearStopwatchHistory} />
         </div>
 
         <div style={{ display: activeTab === 'timer' ? 'block' : 'none' }}>
-          <Timer onFinish={addToHistory} history={history} onClearHistory={clearHistory} />
+          <Timer onFinish={addToTimerHistory} history={timerHistory} onClearHistory={clearTimerHistory} />
         </div>
 
       </div>
