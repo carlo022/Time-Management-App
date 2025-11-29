@@ -1,7 +1,7 @@
 # ⏰ Time Management App
 
 [![Repo Size](https://img.shields.io/github/repo-size/carlo022/React.JS-Weather-Application?color=blue)](https://github.com/carlo022/React.JS-Weather-Application)
-[![License]()](LICENSE)
+[![License](https://github.com/carlo022/Time-Management-App/blob/main/LICENSE)](LICENSE)
 [![Languages](https://img.shields.io/github/languages/top/carlo022/React.JS-Weather-Application)](https://github.com/carlo022/React.JS-Weather-Application)
 [![Made by Carlo](https://img.shields.io/badge/author-Carlo-blue)](https://github.com/carlo022)
 
