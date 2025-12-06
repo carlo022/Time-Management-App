@@ -17,7 +17,6 @@ Welcome to the **Time Management App**—a productivity companion designed to he
 - **Progress Tracking:** Visualize your accomplishments with interactive charts.
 - **Flexible Categories:** Create, edit, and delete categories to suit your workflow.
 - **Search & Filter:** Instantly locate tasks using keyword search or advanced filters.
-- **User Authentication:** Secure sign-up and login system to protect your data.
 - **Responsive Design:** Smooth experience across desktop and mobile devices.
 - **Theme Switching:** Personalize your workspace with light or dark mode.
 
@@ -28,13 +27,10 @@ Welcome to the **Time Management App**—a productivity companion designed to he
 - **Advanced JavaScript (ES6+):** Leveraged modern JavaScript features including arrow functions, destructuring, async/await, promises, and template literals for clean, maintainable code (80.5% of codebase).
 - **React Component Architecture:** Built reusable, stateful components with hooks (useState, useContext, useEffect) for managing task lifecycle and theme state.
 - **Event-Driven Programming:** Implemented WebSocket listeners and event handlers for real-time task notifications and updates.
-- **Database Schema Design:** Modeled relational data structures for tasks, categories, and user profiles with proper indexing and foreign key constraints.
-- **API Integration & Fetch:** Consumed and built RESTful endpoints with proper HTTP methods, status codes, error handling, and request/response management.
 - **Advanced CSS Styling (17.9%):** Utilized CSS custom properties, CSS Grid, Flexbox, transitions, animations, and media queries for responsive, visually appealing interfaces.
 - **Dynamic Theme Switching:** Implemented dark mode/normal mode toggle with real-time style injection and persistent user preferences.
 - **Performance Optimization:** Applied memoization, lazy loading, debouncing techniques, and code splitting to reduce re-renders and optimize search performance.
 - **Client-Side State Persistence:** Leveraged localStorage and session storage for maintaining user preferences and task state across browser sessions.
-- **Security Implementation:** Implemented JWT token validation, input sanitization, XSS protection, and secure authentication flows to protect user data. 
 - **Responsive Web Design:** Engineered mobile-first approach with semantic HTML (1.6%), ensuring accessibility and cross-device compatibility. 
 - **Version Control & Collaboration:** Managed code with Git, maintaining clean commit history and branching strategies for maintainability.
 
